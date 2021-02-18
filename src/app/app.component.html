@@ -1,0 +1,61 @@
+<!-- <div class="container-flex main">
+  <div class="col-md-3">
+    <div class="sliders" cdkDropList [cdkDropListData]="artists"
+    [cdkDropListConnectedTo]="thirdList" #firstList="cdkDropList"
+    (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let artist of artists" [style.backgroundColor]="artist.bgcolor" class="pop_sliders" cdkDrag>{{artist}}</div>
+      
+    </div>
+  </div>
+    <div class="col-md-6">
+      <div class="playarea" cdkDropList [cdkDropListData]="alteArtistsAll"
+        [cdkDropListConnectedTo]="thirdList" #thirdList="cdkDropList"
+        (cdkDropListDropped)="drop($event)">
+        <div *ngFor="let artist of alteArtistsAll" class="pop_playarea" cdkDrag>
+          <img [src]='artist.url'/>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="sketches"  cdkDropList [cdkDropListData]="alteArtists"
+      [cdkDropListConnectedTo]="thirdList" #secondList="cdkDropList"
+      (cdkDropListDropped)="drop($event)">
+      <div *ngFor="let artist of alteArtists" class="pop_sketches" cdkDrag>
+        <img [src]='artist.url' />
+      </div>
+      </div>
+    </div>
+</div> -->
+<!-- <div class="container-flex main">
+
+  <div class="col-md-3">
+  <div class="sliders" cdkDropList [cdkDropListData]="first_artists"
+  [cdkDropListConnectedTo]="thirdList" #firstList="cdkDropList"
+  (cdkDropListDropped)="drop($event, 0)" >
+  <div *ngFor="let artist of first_artists" [style.backgroundColor]="artist.bgcolor" class="pop_sliders" cdkDrag></div>
+  </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="playarea" cdkDropList [cdkDropListData]="third_artists"
+  [cdkDropListConnectedTo]="thirdList" #thirdList="cdkDropList"
+  (cdkDropListDropped)="drop($event, 3)">
+  <div *ngFor="let artist of third_artists" [style.backgroundColor]="artist.bgcolor" class="pop_playarea" cdkDrag>
+    <img [src]='artist.url' />
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-md-3">
+  <div class="sketches" cdkDropList [cdkDropListData]="second_artists"
+  [cdkDropListConnectedTo]="thirdList" #secondList="cdkDropList"
+  (cdkDropListDropped)="drop($event, 1)" >
+  <div *ngFor="let artist of second_artists" class="pop_sketches" cdkDrag>
+    <img [src]='artist.url' />
+  </div>
+  </div>
+  </div>
+
+  </div> -->
+
+  <app-assignment></app-assignment>

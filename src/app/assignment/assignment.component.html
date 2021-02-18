@@ -1,0 +1,32 @@
+<div class="container-flex main">
+    <div class="col-md-3">
+        <div class="sliders" cdkDropList [cdkDropListData]="colors" [cdkDropListConnectedTo]="thirdList"
+            #colorsList="cdkDropList" (cdkDropListDropped)="drop($event, 0)">
+            <div *ngFor="let color of colors;  let i = index" [style.backgroundColor]="color" class="pop_sliders" cdkDrag
+                [cdkDragData]="{'color': color, 'ele': 'color'}"></div>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="playarea" cdkDropList [cdkDropListData]="playArea" [cdkDropListConnectedTo]="thirdList"
+            #thirdList="cdkDropList" (cdkDropListDropped)="drop($event, 2)" >
+            <div *ngFor="let item of playArea;  let i = index" class="pop_playarea_in"  cdkDrag>
+                <div *ngIf = 'item.color' [style.backgroundColor]="item.color" class="pop_sliders_in" >
+                    <img *ngIf = 'item.sketch' [src]='item.sketch' class="pop_sketches_in"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="sketches" cdkDropList [cdkDropListData]="sketches" [cdkDropListConnectedTo]="thirdList"
+            #sketchesList="cdkDropList" (cdkDropListDropped)="drop($event, 1)" >
+            <div *ngFor="let sketch of sketches" class="pop_sketches" cdkDrag 
+                [cdkDragData]="{'sketch': sketch, 'ele':'sketch'}" (cdkDropListDropped)="drop($event, 1)" >
+                <img [src]='sketch'/>
+            </div>
+        </div>
+    </div>
+</div>
